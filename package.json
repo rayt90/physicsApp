@@ -1,0 +1,23 @@
+{
+  "name": "physicsapp",
+  "version": "1.0.0",
+  "description": "Simple Physics Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayt90/physicsApp.git"
+  },
+  "author": "Ray Talbot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayt90/physicsApp/issues"
+  },
+  "homepage": "https://github.com/rayt90/physicsApp#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "mathjs": "^5.9.0"
+  }
+}
