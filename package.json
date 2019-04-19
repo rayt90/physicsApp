@@ -18,6 +18,8 @@
   "homepage": "https://github.com/rayt90/physicsApp#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "mathjax": "^2.7.5",
     "mathjs": "^5.9.0"
   }
 }
