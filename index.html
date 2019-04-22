@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
   <title>Physics Calculator</title>
@@ -16,12 +17,16 @@
   </header>
   <div class="container" id="mechanics">
     <h3>Classical Mechanics</h3>
-    <div class="row">
-      <label>
-        Velocity = `(displacement)/(time)`
-      </label>
-      <label> V = `<input type="number" name="displacement" value=""></input>/<input type="number" name="time" value=""></input>` </label>
-    </div>
+    <h4>Please select any formula to calculate</h4>
+
+    <button class="collapsible">Velocity: `v = (&#8710;s)/(&#8710;t)`</button>
+    <div class="content">
+      </div>
+
+    <button class="collapsible">Accelelation: `a = (&#8710;v)/(&#8710;t)`</button>
+    <div class="content">
+      </div>
+
   </div>
 
 
@@ -32,7 +37,22 @@
     `x = (-b +- sqrt(b^2-4ac))/(2a) .`
   </p>
 
+<script type="text/javascript">
+  var coll = document.getElementByClassName("collapsible");
+  var i;
 
+  for(i=0; i < coll.lenght; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if(content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>
 </body>
 
 </html>
