@@ -1,14 +1,14 @@
-var coll = document.getElementsByClassName("collapsible");
+var acc = document.getElementsByClassName("accordion");
 var i;
 
-for (i = 0; i < coll.length; i++) {
-coll[i].addEventListener("click", function() {
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
   this.classList.toggle("active");
-  var content = this.nextElementSibling;
-  if (content.style.display === "block") {
-    content.style.display = "none";
+  var panel = this.nextElementSibling;
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
   } else {
-    content.style.display = "block";
+    panel.style.display = "block";
   }
 });
 }
