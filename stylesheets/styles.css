@@ -1,3 +1,4 @@
+/*Accordion styles*/
 .accordion {
   background-color: #777;
   color: white;
@@ -34,3 +35,4 @@
   display: none;
   overflow: hidden;
 }
+/*end of accordion styles*/
