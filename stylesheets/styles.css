@@ -24,10 +24,6 @@
   margin-left: 5px;
 }
 
-.motion:after {
-  content: none;
-}
-
 .active:after {
   content: "\2212";
 }
@@ -37,10 +33,6 @@
   background-color: white;
   display: none;
   overflow: hidden;
-}
-
-#motionEq {
-  display: flex;
 }
 
 /*end of accordion styles*/
