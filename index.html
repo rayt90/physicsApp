@@ -21,36 +21,118 @@
 
     <button class="accordion">Average Velocity: `v = (&#8710;s)/(&#8710;t)`</button>
     <div class="panel">
-      <div class="row" id="velocity">
-        <label for="m">x = </label>
-        <input type="number" name="x" value="" id="x" placeholder="displacement" required />
+      <div class="row">
+        <label for="x">Displacement (x) = </label>
+        <input type="number" name="x" value="" id="VelX" placeholder="displacement" required />
         <span>m (meters)</span>
-        </div>
-        <div class="row">
-          <label for="t">t = </label>
-          <input type="number" name="t" value="" id="t" placeholder="time" required />
-          <span>s (seconds)</span>
-          </div>
-          <button type="submit" name="submit" onclick="velocity()">Calculate</button>
-          <output name="result" id="vel"></output>m/s
       </div>
+      <div class="row">
+        <label for="t">Time (t) = </label>
+        <input type="number" name="t" value="" id="VelT" placeholder="time" required />
+        <span>s (seconds)</span>
+      </div>
+      <button type="submit" name="submit" onclick="Velocity()">Calculate</button>
+      <output name="result" id="vel"></output>m/s
+    </div>
 
     <button class="accordion">Accelelation: `a = (&#8710;v)/(&#8710;t)`</button>
     <div class="panel">
+      <div class="row">
+        <label for="v">Velocity (v) = </label>
+        <input type="number" name="v" value="" id="AccV" placeholder="velocity" required />
+        <span>m/s (meters/second)</span>
       </div>
+      <div class="row">
+        <label for="t">Time (t) = </label>
+        <input type="number" name="t" value="" id="AccT" placeholder="time" required />
+        <span>s (seconds)</span>
+      </div>
+      <button type="submit" name="submit" onclick="Acceleration()">Calculate</button>
+      <output name="result" id="acc"></output>m/s&sup2;
+    </div>
 
+    <button class="accordion">Momentum: `p = m/v` </button>
+    <div class="panel">
+      <div class="row">
+        <label for="m">Mass (m) = </label>
+        <input type="number" name="m" value="" id="MomM" placeholder="mass" required />
+        <span>kg (kilograms)</span>
+      </div>
+      <div class="row">
+        <label for="v">Velocity (v) = </label>
+        <input type="number" name="v" value="" id="MomV" placeholder="velocity" required />
+        <span>m/s (meters/second)</span>
+      </div>
+      <button type="submit" name="submit" onclick="Momentum()">Calculate</button>
+      <output name="result" id="mom"></output>kg·m/s
+    </div>
+
+    <button class="accordion">Work: `W = F&#8710;s cos 	&#952;` </button>
+    <div class="panel">
+      <div class="row">
+        <label for="f">Force (F) = </label>
+        <input type="number" name="f" value="" id="WorkF" placeholder="Force" required />
+        <span>N (Newtons)</span>
+      </div>
+      <div class="row">
+        <label for="s">Displacement (s) = </label>
+        <input type="number" name="s" value="" id="WorkS" placeholder="displacement" required />
+        <span>m (meters)</span>
+      </div>
+      <div class="row">
+        <label for="angle">Angle (&#952;) = </label>
+        <input type="number" name="angle" value="" id="WorkAngle" placeholder="Angle" required />
+        <span>Rad (radians)</span>
+      </div>
+      <button type="submit" name="submit" onclick="Work()">Calculate</button>
+      <output name="result" id="work"></output>J (Joules)
+    </div>
+
+  <h4>Laws of Motion: </h4>
+<div class="row" id="motionEq">
+  <button class="accordion motion">`v = u + at` </button>
+  <div class="panel">
+    <div class="row">
+      <label for="f">Initial velocity (u) = </label>
+      <input type="number" name="u" value="" id="firstU" placeholder="Initial velocity" required />
+      <span>m/s (meters/second)</span>
+    </div>
+    <div class="row">
+      <label for="a">Acceleration (a) = </label>
+      <input type="number" name="a" value="" id="firstA" placeholder="acceleration" required />
+      <span>m/s&sup2; (meters/second&sup2;)</span>
+    </div>
+    <div class="row">
+      <label for="t">Time (t)</label>
+      <input type="number" name="time" value="" id="firstT" placeholder="Time" required />
+      <span>s (seconds)</span>
+    </div>
+    <button type="submit" name="submit" onclick="FirstEq()">Calculate</button>
+    <output name="result" id="first"></output>m/s (meters/second)
   </div>
+  <button class="accordion motion">`s = u + vt + 1/2at&sup2;` </button>
+  <div class="panel">
+  </div>
+  <button class="accordion motion">`v&sup2; = u&sup2; + 2as` </button>
+  <div class="panel">
+  </div>
+  <button class="accordion motion">`v&#773; = 1/2(v + u)` </button>
+  <div class="panel">
+  </div>
+</div>
 
+<div class="panel" id="outputPanel"></div>
 
+</div>
 
-  <p>When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and
-    they are</p>
-  <p style="text-align:center">
-    `x = (-b +- sqrt(b^2-4ac))/(2a) .`
-  </p>
+    <p>When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and
+      they are</p>
+    <p style="text-align:center">
+      `x = (-b +- sqrt(b^2-4ac))/(2a) .`
+    </p>
 
-<script src="scripts/accordions.js" charset="utf-8"></script>
-<script src="scripts/equations.js" charset="utf-8"></script>
+    <script src="scripts/accordions.js" charset="utf-8"></script>
+    <script src="scripts/equations.js" charset="utf-8"></script>
 </body>
 
 </html>
