@@ -46,15 +46,41 @@ function Kinetic() {
 }
 
 //---------1st law of motion---------------
-function FirstEq(u, a, t) {
+function FirstEq() {
   'use strict';
   var u = document.getElementById("firstU").value;
   var a = document.getElementById("firstA").value;
   var t = document.getElementById("firstT").value;
   var v = parseInt(u) + parseInt(a)*parseInt(t);
   document.getElementById("firsteq").innerHTML = v;
-  console.log(u);
-  console.log(a);
-  console.log(t);
-  console.log(v);
+}
+
+//---------2nd law of motion--------------
+function SecondEq() {
+  'use strict';
+  var u = document.getElementById("SecondU").value;
+  var t = document.getElementById("SecondT").value;
+  var a = document.getElementById("SecondA").value;
+  var s = u * t + (a * Math.pow(a,2))/2;
+  document.getElementById("second").innerHTML = s;
+}
+
+//-----------3rd law of equation-----------
+function ThirdEq() {
+  'use strict';
+  var u = document.getElementById("ThirdU").value;
+  var a = document.getElementById("ThirdA").value;
+  var s = document.getElementById("ThirdS").value;
+  var vel = Math.sqrt(Math.pow(u,2) + 2*a*s);
+  var v = vel.toFixed(2);
+  document.getElementById("third").innerHTML = v;
+}
+
+//-------------4th law of equation----------
+function FourthEq() {
+  'use strict';
+  var v = document.getElementById("FourthV").value;
+  var u = document.getElementById("FourthU").value;
+  var vAvg = (parseInt(v)+parseInt(u))/2;//Average velocity
+  document.getElementById("fourth").innerHTML = vAvg;
 }
