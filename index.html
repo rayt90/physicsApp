@@ -104,9 +104,7 @@
       <output name="result" id="Kinetic"></output>J (Joules)
     </div>
 
-    <h4>Laws of Motion: </h4>
-
-    <button class="accordion">`v = u + at` </button>
+    <button class="accordion">1st Law of Motion: `v = u + at` </button>
     <div class="panel">
       <div class="row">
         <label for="u">Initial velocity (u) = </label>
@@ -127,7 +125,7 @@
       <output name="result" id="firsteq"></output>m/s (meters/second)
     </div>
 
-    <button class="accordion">`s = ut + 1/2at&sup2;` </button>
+    <button class="accordion">2nd Law of Motion: `s = ut + 1/2at&sup2;` </button>
     <div class="panel">
       <div class="row">
         <label for="u">Initial velocity (u) = </label>
@@ -148,7 +146,7 @@
       <output name="result" id="second"></output>m/s (meters/second)
     </div>
 
-    <button class="accordion">`v&sup2; = u&sup2; + 2as` </button>
+    <button class="accordion">3rd Law of Motion: `v&sup2; = u&sup2; + 2as` </button>
     <div class="panel">
       <div class="row">
         <label for="u">Initial velocity (u) = </label>
@@ -169,7 +167,7 @@
       <output name="result" id="third"></output>m/s (meters/second)
     </div>
 
-    <button class="accordion">`v&#773; = 1/2(v + u)` </button>
+    <button class="accordion">4th Law of Motion: `v&#773; = 1/2(v + u)` </button>
     <div class="panel">
       <div class="row">
         <label for="v">Velocity (v) = </label>
@@ -186,6 +184,35 @@
     </div>
 
   </div>
+
+<div class="container" id="thermo">
+  <h3>Thermodynamics</h3>
+
+  <button class="accordion">Sensible Heat: `Q = mc&#8710;T` </button>
+  <div class="panel">
+    <div class="row">
+      <label for="m">Mass (m) = </label>
+      <input type="number" name="m" value="" id="SensibleM" placeholder="Mass" required />
+      <span>kg (kilograms)</span>
+    </div>
+    <div class="row">
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="HeatCap" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Specific Heat Capacity
+  </button>
+  <div class="dropdown-menu" aria-labelledby="HeatCap">
+    <button class="dropdown-item" type="button">Air</button>
+    <button class="dropdown-item" type="button">Water</button>
+    <button class="dropdown-item" type="button">Iron</button>
+  </div>
+</div>
+      <span>m/s (meters/second)</span>
+    </div>
+    <button type="submit" name="submit" onclick="FourthEq()">Calculate</button>
+    <output name="result" id="fourth"></output>m/s (meters/second)
+  </div>
+
+</div>
 
   <p>When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and
     they are</p>
